@@ -1,0 +1,478 @@
+body {
+
+	-webkit-touch-callout: none;
+	user-select: none;
+    overflow: hidden auto;
+}
+
+/* hide eye button */
+input::-ms-reveal,
+input::-ms-clear {
+
+    display: none;
+}
+
+button,
+input[type=submit] {
+    cursor: pointer;
+}
+
+/* make general style appearance */
+*, *:after, *:before {
+
+    padding: 0;
+    margin: 0;
+    font-family: "monospace";
+    box-sizing: border-box;
+}
+
+.none {
+
+    display: none !important;
+}
+
+header {
+
+    display: flex;
+    width: 100vw;
+    min-height: 80px;
+    flex-wrap: wrap;
+    background-color: #b41212;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+div.header {
+
+    display: flex;
+    width: 100vw;
+    height: 100%;
+    padding: 0 64px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+div.header > div.logo {
+
+    display: flex;
+    width: 64px;
+    height: 64px;
+    margin: 3px 6px;
+    border: 1px solid #151515;
+    border-radius: 50%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #2fe06d;
+    background-image: url(/icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 92% 92%;
+    flex-direction: row;
+}
+
+div.header > div.logo > div.name {
+
+    display: flex;
+    min-width: 128px;
+    height: 64px;
+    margin: 0 -192px 0 0;
+    padding: 0 0 0 12px;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+div.header > div.logo > div.name > span {
+
+    font-weight: bold;
+    font-size: 16pt;
+    color: #e4e4e4;
+}
+
+div.header > div.menu {
+
+    display: flex;
+    width: auto;
+    height: 64px;
+    margin: 3px 6px;
+    padding: 0 6px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+div.header > div.menu > a {
+
+    display: flex;
+    min-width: 80px;
+    height: 64px;
+    padding: 0 4px;
+    margin: 0 6px;
+    border: 2px solid transparent;
+    border-top-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    box-shadow: 4px 0 0 #151515;
+    color: #151515;
+    font-weight: bold;
+    font-size: 24px;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #cecece;
+    justify-content: center;
+    text-decoration: none;
+    flex-direction: row;
+}
+
+div.header > div.menu > a:hover {
+
+    background-color: #e4e4e4;
+}
+
+div.header > div.menu > a:active {
+
+    box-shadow: none;
+}
+
+div.container {
+
+    display: flex;
+    width: 100vw;
+    height: max-content;
+    flex-wrap: wrap;
+    padding: 12px;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+div.container > div.search {
+
+    display: flex;
+    width: 80vw;
+    height: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #64efa3;
+    flex-direction: row;
+}
+
+div.container > div.search > input[type="text"][placeholder="Search"] {
+
+    width: calc(100% - 80px);
+    height: 52px;
+    padding: 0 12px;
+    font-size: 16px;
+}
+
+div.container > div.search > button {
+
+    width: 80px;
+    height: 52px;
+}
+
+div.container > div.gallery {
+
+    display: flex;
+    width: 92vw;
+    min-height: 512px;
+    flex-wrap: wrap;
+    padding: 6px;
+    margin: 12px 0;
+    border: 2px solid #eee;
+    border-radius: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+
+}
+
+
+div.container > div.gallery > div.item {
+
+    margin: 6px;
+}
+
+div.container > div.gallery > div.item.product-insert {
+
+    cursor: pointer;
+    display: flex;
+    width: 192px;
+    height: 320px;
+    flex-wrap: nowrap;
+    border: 2px dashed #a5a5a5;
+    border-radius: 12px;
+    background-color: #f4f4f4;
+    background-image: url(/pencil-plus-outline.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 52px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div.container > div.gallery > div.item.product-item {
+
+    /* cursor: pointer; */
+    display: block;
+    width: 192px;
+    height: 320px;
+    overflow: hidden;
+}
+
+div.container > div.gallery > div.item > div.product-item:first-child {
+
+    display: flex;
+    width: 192px;
+    height: 320px;
+    flex-wrap: nowrap;
+    border: 2px solid #151515;
+    border-radius: 12px;
+    background-color: skyblue;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+div.container > div.gallery > div.item > div.item.product-item:last-child {
+
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 192px;
+    height: 320px;
+    margin: -320px 0 0 0;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+div.container > div.gallery > div.item > div.item.product-item > div.item.product-title {
+
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-wrap: nowrap;
+    font-size: 16pt;
+    font-weight: bold;
+    text-shadow: 2px 2px #efefef;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+div.container > div.gallery > div.item > div.item.product-item > div.item.product-modified {
+
+    display: flex;
+    width: 100%;
+    height: 24px;
+    flex-wrap: nowrap;
+    font-size: 11pt;
+    font-style: italic;
+    padding: 0 4px 4px 0;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+div.container > div.gallery > div.item > div.item.product-item > div.item.product-description {
+
+    display: flex;
+    width: 100%;
+    height: 184px;
+    flex-wrap: nowrap;
+    border: none;
+    border-top: 2px solid #151515;
+    word-wrap: break-word;
+    text-align: justify;
+    padding: 4px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+div.container > div.gallery > div.item > div.item.product-item > div.item.product-price {
+
+    position: relative;
+    display: flex;
+    float: right;
+    top: 232px;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 22px;
+    flex-wrap: nowrap;
+    font-size: 12pt;
+    font-weight: bold;
+    text-shadow: -2px -2px #efefef;
+    padding: 0 4px 0 0;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+div.container > div.gallery > div.item > div.item.product-item > div.item.product-remove {
+
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    float: right;
+    top: 2px;
+    right: 2px;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #151515;
+    flex-wrap: nowrap;
+    font-size: 12pt;
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: rgb(218, 24, 24);
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+div.container > div.gallery > div.item > div.item.product-item > div.item.product-buy {
+
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    float: left;
+    top: 140px;
+    left: 2px;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #151515;
+    flex-wrap: nowrap;
+    font-size: 12pt;
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: rgb(72, 256, 64);
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+div.shadow-popup {
+
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(15, 15, 15, 0.4);
+    flex-direction: column;
+}
+
+div.shadow-popup > button.exit {
+
+    position: fixed;
+    display: block;
+    top: calc(50% - 152px);
+    left: calc(50% + 160px);
+    width: 64px;
+    height: 64px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #151515;
+    background-color: #cc3636;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+}
+
+div.popup {
+
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: fit-content;
+    height: fit-content;
+    padding: 12px;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #151515;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+}
+
+div.popup > form {
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div.popup > form > div {
+
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+div.popup > form > div.center {
+
+    align-items: center;
+    justify-content: center;
+}
+
+div.popup > form > div.right {
+
+    align-items: center;
+    justify-content: flex-end;
+}
+
+div.popup > form > input[type="text"],
+div.popup > form > input[type="number"],
+div.popup > form > div > input[type="submit"],
+div.popup > form > select {
+
+    height: 32px;
+    border: 2px solid #151515;
+    border-radius: 0;
+    margin: 2px;
+    padding: 4px;
+}
+
+div.popup > form > input[type="text"]:focus,
+div.popup > form > input[type="text"]:active,
+div.popup > form > input[type="number"]:focus,
+div.popup > form > input[type="number"]:active,
+div.popup > form > div > input[type="submit"]:focus,
+div.popup > form > div > input[type="submit"]:active,
+div.popup > form > select:focus,
+div.popup > form > select:active {
+
+    outline: none;
+}
+
+footer {
+
+    display: flex;
+    width: 100vw;
+    min-height: 52px;
+    flex-wrap: wrap;
+    padding: 0 12px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}

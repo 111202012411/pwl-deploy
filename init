@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+cwd=$(pwd)
+cd $(dirname $0)
+
+EXIT_SUCCESS=0
+EXIT_FAILURE=1
+
+function check() {
+
+  if [ -n "$1" ]; then
+
+    if [ -z "$(which $1 | grep -iv 'not found')" ]; then
+
+      echo -en "\x1b[1;31;40m$1 not found\x21\x1b[0m\n" && exit $EXIT_FAILURE      
+    fi
+  else
+
+    echo -en "\x1b[1;31;40mundefined\x21\x1b[0m\n" && exit $EXIT_FAILURE
+  fi
+}
+
+check python
+check pip
+
+python -m pip install -r requirements.txt
+
+if [ ! -d server ]; then
+
+  mkdir server
+  touch {main,server/api,server/routes,server/__init__}.py
+fi
+
+python main.py
+
+cd $cwd

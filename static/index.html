@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace by Ahmad Asy SyafiQ</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="dashboard.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo">
+                <div class="name">
+                    <span>MarketSK<sup>&trade;</sup></span>
+                </div>
+            </div>
+            <div class="menu">
+                <a id="admin" href="#">Admin</a>
+                <a href="#">Home</a>
+                <a href="history.html">History</a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <button>Search</button>
+        </div>
+        <div class="gallery">
+
+        </div>
+    </div>
+    <div class="shadow-popup none">
+        <button class="exit">X</button>
+        <div class="popup">
+
+            <form id="productAdd" action="#" method="post">
+    
+                <!-- {
+                    "name": "jessie pro x",
+                    "description": "jessie module for professional",
+                    "categories": "software,module,markup_language",
+                    "period_of_time": "annually",
+                    "author": "ahmad asy syafiq",
+                    "price": 120
+                } -->
+    
+                <div class="center">
+                    <h2>Tambah Produk</h2>
+                </div>
+    
+                <input type="text" name="name" id="name" placeholder="name" required>
+                <input type="text" name="description" id="description" placeholder="description" required>
+                <input type="text" name="categories" id="categories" placeholder="categories" required>
+                <select name="period_of_time" id="periodOfTime">
+                    <option value="lifetime">Lifetime</option>
+                    <option value="annually" selected>Annually</option>
+                    <option value="monthly">Monthly</option>
+                </select>
+                <input type="text" name="author" id="author" placeholder="author" required>
+                <input type="number" min="0" name="price" id="price" placeholder="price" required>
+                <div class="right">
+                    <input type="submit" value="submit">
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="copyright">
+            <p>Copyright &copy; 2022 Ahmad Asy SyafiQ</p>
+        </div>
+    </footer>
+</body>
+</html>

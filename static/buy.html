@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace by Ahmad Asy SyafiQ</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="buy.css">
+    <script src="buy.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo">
+                <div class="name">
+                    <span>MarketSK<sup>&trade;</sup></span>
+                </div>
+            </div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="content">
+            <div class="preview preview-product preview-product-item">
+                <div class="item product-item">
+                    <div class="product-photo">
+                        <img class="out" src="/icon.png" alt="product-photo">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">
+                            <h3 class="out">unknown</h3>
+                        </div>
+                        <div class="product-description">
+                            <p class="out">unknown</p>
+                        </div>
+                        <div class="product-categories">
+                            <span>cat.</span>
+                            <span class="out">unknown</span>
+                        </div>
+                        <div class="product-license">
+                            <span>LICENSE</span>
+                            <span class="out">unknown</span>
+                        </div>
+                        <div class="product-period">
+                            <span>PERIOD</span>
+                            <span class="out">unknown</span>
+                        </div>
+                        <div class="product-author">
+                            <span>Author</span>
+                            <span class="out">unknown</span>
+                        </div>
+                        <div class="product-vendor">
+                            <span>Vendor</span>
+                            <span class="out">unknown</span>
+                        </div>
+                        <div class="product-price">
+                            <span>Price</span>
+                            <span class="out">0</span>
+                        </div>
+                        <div class="product-sale">
+                            <span>Sale</span>
+                            <span class="out">0</span>
+                        </div>
+                        <div class="product-created">
+                            <span>created</span>
+                            <span class="out">unknown</span>
+                        </div>
+                        <div class="product-modified">
+                            <span>modified</span>
+                            <span class="out">unknown</span>
+                        </div>
+                        <div class="product-action">
+                            <!-- <button class="bank-transfer"></button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="user-cnx">
+                <!-- belom daftar -->
+                <!-- username: str
+                name: str
+                gender: str
+                day_of_birthday: str
+                email: str
+                phone: str
+                address: str
+                country: str
+                language: str
+                pos_code: str -->
+                <div class="user-form">
+                    <div class="wrap-name">
+                        <h3>User Registration</h3>
+                    </div>
+                    <form id="userRegistrationForm" action="#" method="post" enctype="multipart/form">
+                        <div class="in">
+                            <label for="userName">Unique Name</label>
+                            <input type="text" name="username" id="userName" placeholder="username" required>
+                        </div>
+                        <div class="in">
+                            <label for="realName">Real Name</label>
+                            <input type="text" name="name" id="realName" placeholder="First Name, Last Name" required>
+                        </div>
+                        <div class="in">
+                            <span>Gender</span>
+                            <div class="radio">
+                                <div class="male">
+                                    <input type="radio" name="gender" id="genderMale" value="male" checked>
+                                    <label for="genderMale">Male</label>
+                                </div>
+                                <div class="female">
+                                    <input type="radio" name="gender" id="genderFemale" value="female">
+                                    <label for="ganderFemale">Female</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="in">
+                            <label for="dayOfBirthday">Day Of Birthday</label>
+                            <input type="date" name="day_of_birthday" id="dayOfBirthday" required>
+                        </div>
+                        <div class="in">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="example@email.com" required>
+                        </div>
+                        <div class="in">
+                            <label for="phone">Phone</label>
+                            <!-- ref. https://www.huzefril.com/posts/regex/regex-nomor-handphone -->
+                            <input type="tel" name="phone" id="phone" minlength="10" maxlength="13" pattern="^(\+62|62)?[\s-]?0?8[1-9]{1}\d{1}[\s-]?\d{4}[\s-]?\d{2,5}$" required>
+                        </div>
+                        <div class="in">
+                            <label for="address">Address</label>
+                            <input type="text" name="address" id="address" placeholder="Jl. ayam kalkun kukus no. 12" required>
+                        </div>
+                        <div class="in">
+                            <label for="country">Country</label>
+                            <input type="text" name="country" id="country" placeholder="indonesia" required>
+                        </div>
+                        <div class="in">
+                            <label for="language">Language</label>
+                            <input type="text" name="language" id="language" placeholder="indonesia" required>
+                        </div>
+                        <div class="in">
+                            <label for="posCode">Postal Code</label>
+                            <input type="text" name="pos_code" id="posCode" length="5" placeholder="5xxxx" required>
+                        </div>
+                        <div class="in">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" minlength="8" placeholder="Enter your password"required>
+                        </div>
+                        <div class="in">
+                            <label for="passwordConfirm">Pass Confirm</label>
+                            <input type="password" name="password_confirm" id="passwordConfirm" minlength="8" placeholder="Confirm password" required>
+                        </div>
+                        <div class="submit">
+                            <button id="login">Sign In</button>
+                            <input type="submit" value="Sign Up">
+                        </div>
+                    </form>
+                </div>
+                <!-- sudah daftar -->
+                <div class="user-login none">
+                    <div class="wrap-name">
+                        <h3>User Login</h3>
+                    </div>
+                    <form id="userLoginForm" action="#" method="post" enctype="multipart/form">
+                        <div class="in">
+                            <label for="userNameL">Name</label>
+                            <input type="text" name="username" id="userNameL" placeholder="username" required>
+                        </div>
+                        <div class="in">
+                            <label for="passwordL">Password</label>
+                            <input type="password" name="password" id="passwordL" minlength="8" placeholder="Enter your password"required>
+                        </div>
+                        <div class="in">
+                            <span>Remember me</span>
+                            <div class="checkbox">
+                                <div class="male">
+                                    <input type="checkbox" name="keep_alive" id="rememberMe" value="yes" checked>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="in">
+                            <a href="#forgot">Forgot Password?</a>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="transaction-method">
+                <!-- user_id: int
+                user_id: int
+                product_id: int
+                payment_type: str
+                payment_paid: Optional[bool] -->
+                <div class="transaction">
+                    <div class="wrap-name">
+                        <h3>Transaction</h3>
+                    </div>
+                    <form id="transactionForm" action="#" method="post" enctype="multipart/form">
+
+                        <div class="in">
+                            <select name="payment_type" id="paymentType">
+                                <option value="bank_transfer" checked>Bank Transfer</option>
+                                <option value="credit_card">Credit Card</option>
+                                <option value="emoney">E-Money</option>
+                            </select>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <input id="removeCache" type="submit" value="remove cache">
+        </div>
+    </div>
+    <footer>
+        <div class="copyright">
+            <p>Copyright &copy; 2022 Ahmad Asy SyafiQ</p>
+        </div>
+    </footer>
+</body>
+</html>
