@@ -20,10 +20,10 @@ function check() {
   fi
 }
 
-check python
-check pip
+check python3
 
-python -m pip install -r requirements.txt
+#python3 ensurepip
+#python3 -m pip install -r requirements.txt
 
 if [ ! -d server ]; then
 
@@ -31,6 +31,6 @@ if [ ! -d server ]; then
   touch {main,server/api,server/routes,server/__init__}.py
 fi
 
-python main.py
+python3 main.py
 
 cd $cwd
