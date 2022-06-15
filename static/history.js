@@ -20,7 +20,7 @@
             this.product_name = product_name
             this.product_price = product_price
             this.product_sale = product_sale
-            this.count = 0
+            this.count = 1
         }
 
         static init(o) {

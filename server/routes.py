@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import base64
+import base64, os
 from typing import Optional, Union, Callable
 from json.decoder import JSONDecodeError
 from fastapi import APIRouter, Request, Response
@@ -610,4 +610,17 @@ async def transactions(name: str, request: Request, response: Response) -> Respo
     return JSONResponse(content={
         "status_code": 413,
         "message": "value missing!."
+    })
+
+@route("/v1/test")
+async def test(request: Request, response: Response) -> Response:
+
+    db_exists: bool
+    db_exists = os.path.exists(connect_db.src)
+
+    #* db_writable: bool
+    #* db_writable = open(connect_db.src, "wb").writable()
+
+    return JSONResponse(content={
+        "db_exists": db_exists
     })

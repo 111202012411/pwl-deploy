@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+#* pyenv
+PYTHONPATH=~/.pyenv/versions/3.9.8/lib/python3.9/lib-dynload:~/.pyenv/versions/3.9.8/lib/python3.9:~/.pyenv/versions/3.9.8/lib/python3.9/site-packages ~/.pyenv/versions/3.9.8/bin/pip3 install --target lib/python3/site-packages --upgrade -r requirements.txt
+PYTHONPATH=~/.pyenv/versions/3.9.8/lib/python3.9/lib-dynload:~/.pyenv/versions/3.9.8/lib/python3.9:~/.pyenv/versions/3.9.8/lib/python3.9/site-packages ~/.pyenv/versions/3.9.8/bin/python3 main.py

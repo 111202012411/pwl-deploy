@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+cwd=$(pwd)
+cd $(dirname $0)
+
+if [ ! -d tmp ]; then
+
+  mkdir -p tmp
+fi
+
+if [ -f sources.lst ]; then
+
+  while IFS= read -r url; do
+
+	FILE=$(basename $url)
+	FILENAME=$(echo $FILE | cut -d\. -f1)
+    wget -c $url -O tmp/$FILE
+    tar -xf tmp/$FILE -C tmp
+    cd tmp/$FILENAME
+    
+    ./configure
+    make -j$(nproc)
+    make install
+
+  done <sources.lst
+fi
+
+cd $cwd

@@ -84,6 +84,7 @@ ConnectDB = TypeVar("ConnectDB", bound="ConnectDB")
 
 class ConnectDB(SimpleDatabaseType):
 
+    src: Optional[str]
     uri: Union[str, None]
     conn: sql.Connection
     cursor: sql.Cursor
@@ -101,6 +102,9 @@ class ConnectDB(SimpleDatabaseType):
 
             src: str
             src = os.path.join(os.path.dirname(__file__), "../db/sqlite3.db")
+
+            #* store src to open pub
+            self.src = src
 
             #* make dirs
             os.makedirs(os.path.dirname(src), mode = 0o755, exist_ok = True)
@@ -124,6 +128,7 @@ class ConnectDB(SimpleDatabaseType):
 
     def commit(self: ConnectDB) -> None:
 
+        #* self.cursor.execute("COMMIT")
         self.conn.commit()
 
     def close(self: ConnectDB) -> None:
