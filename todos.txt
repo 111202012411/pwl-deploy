@@ -1,0 +1,4 @@
+sqlite3
+LD_LIBRARY_PATH
+site-packages
+lib-dynload

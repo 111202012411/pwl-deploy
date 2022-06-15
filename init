@@ -22,6 +22,18 @@ function check() {
 
 check python3
 
+PYTHON=
+if [ -f shims/python3 ]; then
+
+  chmod a+x shims/python3
+  PYTHON=shims/python3
+fi
+
+if [ -z $PYTHON ]; then
+
+  PYTHON=$(which python3)
+fi
+
 #python3 ensurepip
 #python3 -m pip install -r requirements.txt
 
@@ -31,6 +43,6 @@ if [ ! -d server ]; then
   touch {main,server/api,server/routes,server/__init__}.py
 fi
 
-python3 main.py
+$PYTHON main.py
 
 cd $cwd
