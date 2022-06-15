@@ -21,9 +21,8 @@ function check() {
 }
 
 check env
-check dbus-launch
 check python3
 
-env LD_LIBRARY_PATH=`pwd`/lib:$LD_LIBRARY_PATH PYTHONPATH=`pwd`/lib/python3:`pwd`/lib/python3/lib-dynload:`pwd`/lib/python3/site-packages dbus-launch python3 $@
+env LD_LIBRARY_PATH=`pwd`/lib:$LD_LIBRARY_PATH PYTHONPATH=`pwd`/lib/python3:`pwd`/lib/python3/lib-dynload:`pwd`/lib/python3/site-packages python3 $@
 
 #cd $cwd
